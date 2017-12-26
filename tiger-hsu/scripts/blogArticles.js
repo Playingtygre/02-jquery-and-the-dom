@@ -1,7 +1,7 @@
 'use strict';
 
 // COMMENT: How is this data utilized within our blog app? What is the structure of this data (your response should include the terms "object", "array", and "key/value pairs")?
-// The variable rawData will be utilized in the article.js filling in the rendering. In the function Article(obj) is a object constructor and will be passing items thru the rawData which are the key value pairs. The article js file also has a toHml which will allow all the rawData to be posted to the index.html.
+// PUT YOUR RESPONSE HERE
 
 let rawData = [
   {
