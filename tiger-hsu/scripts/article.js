@@ -19,7 +19,7 @@ function Article (rawDataObj) {
 
 Article.prototype.toHtml = function() {
   // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-  // // I'm not exactly sure 100% because I have never really delt with prototypes, but I am assuming that Article forces "this" : "key value" using a prototype so we dont have to push in every blog listing, into a  text Html, that will be rendered into a 'blanket' on the html view side. 
+  //I'm not exactly sure 100% because I have never really delt with prototypes, but I am assuming that Article forces "this" : "key value" using a prototype so we dont have to push in every blog listing, into a  text Html, that will be rendered into a 'blanket' on the html view side. 
 
   let $newArticle = $('article.template').clone();
   /* TODONE: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
@@ -29,7 +29,7 @@ Article.prototype.toHtml = function() {
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.attr('data-category', this.category);
 
-  /* TODO: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
+  /* TODONE: Now use jQuery traversal and setter methods to fill in the rest of the current template clone with values of the properties of this particular Article instance.
     We need to fill in:
       1. author name,
       2. author url,
